@@ -1,0 +1,7 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+# Your personal backup from the popup's "Copy backup" — never commit it
+*backup*.json

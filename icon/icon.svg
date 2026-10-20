@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#4F7BFF"/>
+      <stop offset="1" stop-color="#2B3FC7"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD54A"/>
+      <stop offset="1" stop-color="#F5A300"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0b1460" flood-opacity="0.4"/>
+    </filter>
+    <filter id="card" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0b1460" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)"><rect x="100" y="100" width="824" height="824" rx="186" fill="url(#bg)"/></g>
+  <rect x="100" y="100" width="824" height="824" rx="186" fill="url(#sheen)"/>
+
+  <!-- application form -->
+  <g filter="url(#card)">
+    <rect x="262" y="214" width="440" height="560" rx="48" fill="#FFFFFF"/>
+  </g>
+  <!-- header bar -->
+  <rect x="314" y="270" width="200" height="30" rx="15" fill="#2B3FC7"/>
+  <!-- field 1: filled -->
+  <rect x="314" y="340" width="336" height="76" rx="18" fill="#EEF2FF"/>
+  <rect x="340" y="368" width="190" height="20" rx="10" fill="#4F7BFF"/>
+  <!-- field 2: filled -->
+  <rect x="314" y="446" width="336" height="76" rx="18" fill="#EEF2FF"/>
+  <rect x="340" y="474" width="240" height="20" rx="10" fill="#4F7BFF"/>
+  <!-- field 3: being filled, with cursor -->
+  <rect x="314" y="552" width="336" height="76" rx="18" fill="#FFF7E0" stroke="#F5A300" stroke-width="6"/>
+  <rect x="340" y="580" width="110" height="20" rx="10" fill="#F5A300"/>
+  <rect x="466" y="570" width="8" height="40" rx="4" fill="#F5A300"/>
+  <!-- bottom line -->
+  <rect x="314" y="670" width="160" height="22" rx="11" fill="#D9E0F7"/>
+
+  <!-- helper badge: bolt -->
+  <g transform="translate(700 690)">
+    <circle r="130" fill="url(#gold)" stroke="#FFFFFF" stroke-width="18"/>
+    <path d="M18 -82 L -54 14 H -4 L -22 82 L 54 -16 H 4 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+</svg>

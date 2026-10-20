@@ -1,0 +1,75 @@
+{
+    "manifest_version": 3,
+    "name": "Apply Helper",
+    "description": "Learns your answers as you apply, fills them in next time, attaches your résumé, and checks LinkedIn profiles for referrals. Everything stays on your Mac.",
+    "version": "2.1",
+    "icons": {
+        "48": "images/icon-48.png",
+        "96": "images/icon-96.png",
+        "128": "images/icon-128.png",
+        "256": "images/icon-256.png",
+        "512": "images/icon-512.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ],
+            "exclude_matches": [
+                "https://www.linkedin.com/in/*"
+            ],
+            "all_frames": true,
+            "run_at": "document_idle"
+        },
+        {
+            "js": [
+                "content-linkedin.js"
+            ],
+            "css": [
+                "panel.css"
+            ],
+            "matches": [
+                "https://www.linkedin.com/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Apply Helper",
+        "default_icon": {
+            "16": "images/toolbar-16.png",
+            "19": "images/toolbar-19.png",
+            "32": "images/toolbar-32.png",
+            "38": "images/toolbar-38.png",
+            "48": "images/toolbar-48.png"
+        }
+    },
+    "commands": {
+        "fill-page": {
+            "suggested_key": {
+                "default": "Alt+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Fill this application with saved answers"
+        }
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "clipboardWrite",
+        "unlimitedStorage"
+    ],
+    "options_ui": {
+        "page": "settings.html",
+        "open_in_tab": true
+    }
+}

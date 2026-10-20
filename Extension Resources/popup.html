@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/icon-96.png" width="40" height="40" alt="">
+        <div>
+            <h1>Apply Helper</h1>
+            <p class="sub" id="stats">Loading…</p>
+        </div>
+    </header>
+
+    <button id="fill" class="primary">Fill this page</button>
+    <p id="result" class="result" hidden></p>
+
+    <section class="settings">
+        <label class="row">
+            <span>Learn from what I type</span>
+            <input type="checkbox" id="learn" class="switch">
+        </label>
+        <label class="row">
+            <span>Fill automatically</span>
+            <select id="autoFill">
+                <option value="ats">On job sites</option>
+                <option value="always">Everywhere</option>
+                <option value="never">Only when I click</option>
+            </select>
+        </label>
+        <label class="row" id="pauseRow">
+            <span>Pause on <b id="host">this site</b></span>
+            <input type="checkbox" id="pause" class="switch">
+        </label>
+    </section>
+
+    <section class="memory">
+        <div class="memhead">
+            <h2>Saved answers</h2>
+            <input id="search" type="search" placeholder="Search">
+        </div>
+        <ul id="list"></ul>
+        <p id="empty" class="empty" hidden>Nothing saved yet. Fill out an application normally — every answer you type is remembered for the next one.</p>
+    </section>
+
+    <footer>
+        <button id="export" class="link">Copy backup</button>
+        <button id="import" class="link">Restore backup</button>
+        <button id="settings" class="link">Résumé &amp; referral settings</button>
+        <button id="clear" class="link danger">Forget everything</button>
+    </footer>
+    <div id="importBox" hidden>
+        <textarea id="importText" placeholder="Paste a backup here"></textarea>
+        <button id="importGo" class="primary small">Restore</button>
+    </div>
+</body>
+</html>

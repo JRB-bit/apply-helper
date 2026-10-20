@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Apply Helper settings</title>
+<link rel="stylesheet" href="popup.css">
+<style>
+  body { width: auto; max-width: 600px; margin: 32px auto; padding: 0 20px; font-size: 14px; }
+  h2 { margin: 28px 0 6px; }
+  .hint { color: var(--muted); font-size: 13px; margin: 4px 0 10px; }
+  label { display: block; margin: 12px 0 4px; font-weight: 600; }
+  input[type=text], textarea { width: 100%; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+  textarea { min-height: 90px; resize: vertical; }
+  .count { text-align: right; font-size: 12px; color: var(--muted); }
+  .count.over { color: var(--danger); font-weight: 600; }
+  .primary { width: auto; margin-top: 20px; padding: 9px 20px; }
+  #status { margin-left: 10px; color: #2f7d4f; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <img src="images/icon-96.png" width="44" height="44" alt="">
+  <div><h1>Apply Helper settings</h1><p class="sub">Your answers are edited from the toolbar button. Everything stays on your Mac.</p></div>
+</header>
+
+<h2>Résumé</h2>
+<p class="hint">Attached automatically to the résumé upload box when Apply Helper fills a form.</p>
+<input id="resume" type="file" accept=".pdf,.doc,.docx">
+<p class="hint" id="resumeName">No résumé saved yet.</p>
+
+<h2>LinkedIn referral check</h2>
+<p class="hint">On a LinkedIn profile, Apply Helper checks whether the person works at this company and is US-based, then fills in your note to copy.</p>
+<label for="company">Company you're targeting</label>
+<input id="company" type="text" placeholder="Acme">
+<label for="role">Role</label>
+<input id="role" type="text" placeholder="SWE Internship">
+<label for="noteTemplate">Connection note</label>
+<p class="hint">Use {first}, {company} and {role}. LinkedIn's free limit is 200 characters.</p>
+<textarea id="noteTemplate"></textarea>
+<div class="count" id="count"></div>
+
+<button id="save" class="primary">Save</button><span id="status" role="status"></span>
+<script src="settings.js"></script>
+</body>
+</html>

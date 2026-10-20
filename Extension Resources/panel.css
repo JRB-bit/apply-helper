@@ -1,0 +1,31 @@
+.ah-panel {
+  position: fixed; right: 20px; bottom: 20px; z-index: 2147483647;
+  width: 300px; padding: 14px 16px; border-radius: 10px;
+  background: #fff; color: #1f2a44; border: 1px solid #c9d3e6;
+  box-shadow: 0 6px 24px rgba(31, 42, 68, .18);
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.ah-panel h3 { margin: 0 0 8px; font-size: 15px; font-weight: 650; }
+.ah-row { display: flex; gap: 8px; align-items: baseline; margin: 4px 0; }
+.ah-ok { color: #2f7d4f; font-weight: 600; }
+.ah-no { color: #b3261e; font-weight: 600; }
+.ah-maybe { color: #a86b00; font-weight: 600; }
+.ah-detail { color: #5a6580; font-size: 12.5px; }
+.ah-note {
+  width: 100%; box-sizing: border-box; margin-top: 10px; min-height: 92px;
+  padding: 8px; border: 1px solid #c9d3e6; border-radius: 6px;
+  font: inherit; font-size: 13px; color: inherit; resize: vertical;
+}
+.ah-count { font-size: 12px; color: #5a6580; text-align: right; }
+.ah-count.ah-over { color: #b3261e; font-weight: 600; }
+.ah-btn {
+  margin-top: 8px; padding: 7px 12px; border: 0; border-radius: 6px;
+  background: #2e5bba; color: #fff; font: inherit; font-weight: 600; cursor: pointer;
+}
+.ah-btn:hover { background: #244a99; }
+.ah-btn:focus-visible { outline: 3px solid #9db6ea; outline-offset: 2px; }
+.ah-close {
+  position: absolute; top: 8px; right: 10px; border: 0; background: none;
+  font-size: 18px; color: #5a6580; cursor: pointer;
+}
+.ah-filled { outline: 2px solid #2f7d4f !important; outline-offset: 1px; }
